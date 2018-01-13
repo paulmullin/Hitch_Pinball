@@ -1,0 +1,7 @@
+This directory contains the pixel driver files
+
+compile on the beagle bone with Pasm
+written in PRU asembly code
+
+"PASM -b Pixel_driver.p"
+
