@@ -1,0 +1,481 @@
+/***
+ * Pixel layout
+ *
+ * constants that map the physical layout of pixels and pixel groups
+ *
+ *
+ */
+
+#ifndef PIXEL_LAYOUT
+#define PIXEL_LAYOUT
+
+//Pixel color definitions
+//green:red:blue
+#define P_RED 		0x00000100
+#define P_GREEN 	0x00010000
+#define P_BLUE		0x00000001
+#define P_PURPLE  	0x00000101
+#define P_YELLOW 	0x00010100
+#define P_TEAL		0x00010001
+#define P_WHITE  	0x00010101
+#define P_OFF		0x00000000
+
+
+//Pixel Types (some have colored plastic lenses)
+#define LNS_CLEAR 	0
+#define LNS_RED 	1
+#define LNS_WHITE	2
+#define LNS_BLUE	3
+#define LNS_YELLOW	4
+#define LNS_ORANGE  5
+
+typedef struct { int X; int Y; int Type; } PIXLOC; //pixel location (mm,mm) and lens type
+
+
+
+//Pixel Location in the string of NEOPIXELS
+//this allows additions subtractions in the center of the string
+#define SCREEN 0 //center screen is first and contains 256 Pixels (16x16)
+
+#define BONUS100 256
+#define BONUS200 257
+#define BONUS300 258
+#define BONUS400 259
+
+#define MULTx1 260
+#define MULTx2 261
+#define MULTx3 262
+#define MULTx4 263
+#define MULTx5 264
+
+#define DOLPIN 265
+#define MOUSE 266
+
+#define LEFTRUN_TR 267
+#define LEFTRUN_TL 268
+
+#define ZAPGUN 269
+
+#define LEFTRUN_CR 270
+#define LEFTRUN_CL 271
+
+#define HEART_1 272
+#define HEART_2 273
+#define HEART_3 274
+#define HEART_RED 275
+
+#define LEFTRUN_LR 276
+
+#define COMET_1 277
+#define COMET_2 278
+#define COMET_3 279
+#define COMET_4 280
+
+#define DRAIN_LEFT 281
+
+#define STAUS_1 282
+#define STAUS_2 283
+#define STAUS_3 284
+#define STAUS_4 285
+#define STAUS_5 286
+#define STAUS_6 287
+
+#define DRAIN_CENTER 284+4
+
+#define GLOBE_START 285+4
+#define GLOBE_END 305+4
+
+#define BABELFISH 306+4
+
+#define ROCKET1 307+4  //back end of rocket
+#define ROCKET2 308+4
+#define ROCKET3 309+4
+#define ROCKET4 310+4
+#define ROCKET5 311+4
+#define ROCKET6 312+4
+#define ROCKET7 313+4 //rocket tip
+
+#define TRILOGY 307+7+4
+#define JELTZ_1 308+7+4
+#define JELTZ_2 309+7+4
+
+#define BONUS500 310+7+4
+#define BONUS600 311+7+4
+#define BONUS700 312+7+4
+#define BONUS800 313+7+4
+#define BONUS900 314+7+4
+
+#define RAINBOW 315+7+4
+
+#define LIFE 317+7+4
+#define BETELGUESE 316+7+4
+#define UNIVERSE 318+7+4
+#define EVERYTHING 319+7+4
+#define EVERYTHING_LEFT 320+7+4
+
+
+// X,Y and type for every Pixel in order!
+PIXLOC Pixel_XYT[400] = {
+		{ 315,315 ,LNS_CLEAR}, /* 0  screen upper right */
+		{ 305,315 ,LNS_CLEAR},
+		{ 295,315 ,LNS_CLEAR},
+		{ 285,315 ,LNS_CLEAR},
+		{ 275,315 ,LNS_CLEAR},
+		{ 265,315 ,LNS_CLEAR},
+		{ 255,315 ,LNS_CLEAR},
+		{ 245,315 ,LNS_CLEAR},
+		{ 235,315 ,LNS_CLEAR},
+		{ 225,315 ,LNS_CLEAR},
+		{ 215,315 ,LNS_CLEAR},
+		{ 205,315 ,LNS_CLEAR},
+		{ 195,315 ,LNS_CLEAR},
+		{ 185,315 ,LNS_CLEAR},
+		{ 175,315 ,LNS_CLEAR},
+		{ 165,315 ,LNS_CLEAR},
+		{ 165,305 ,LNS_CLEAR},
+		{ 175,305 ,LNS_CLEAR},
+		{ 185,305 ,LNS_CLEAR},
+		{ 195,305 ,LNS_CLEAR},
+		{ 205,305 ,LNS_CLEAR},
+		{ 215,305 ,LNS_CLEAR},
+		{ 225,305 ,LNS_CLEAR},
+		{ 235,305 ,LNS_CLEAR},
+		{ 245,305 ,LNS_CLEAR},
+		{ 255,305 ,LNS_CLEAR},
+		{ 265,305 ,LNS_CLEAR},
+		{ 275,305 ,LNS_CLEAR},
+		{ 285,305 ,LNS_CLEAR},
+		{ 295,305 ,LNS_CLEAR},
+		{ 305,305 ,LNS_CLEAR},
+		{ 315,305 ,LNS_CLEAR},
+		{ 315,295 ,LNS_CLEAR},
+		{ 305,295 ,LNS_CLEAR},
+		{ 295,295 ,LNS_CLEAR},
+		{ 285,295 ,LNS_CLEAR},
+		{ 275,295 ,LNS_CLEAR},
+		{ 265,295 ,LNS_CLEAR},
+		{ 255,295 ,LNS_CLEAR},
+		{ 245,295 ,LNS_CLEAR},
+		{ 235,295 ,LNS_CLEAR},
+		{ 225,295 ,LNS_CLEAR},
+		{ 215,295 ,LNS_CLEAR},
+		{ 205,295 ,LNS_CLEAR},
+		{ 195,295 ,LNS_CLEAR},
+		{ 185,295 ,LNS_CLEAR},
+		{ 175,295 ,LNS_CLEAR},
+		{ 165,295 ,LNS_CLEAR},
+		{ 165,285 ,LNS_CLEAR},
+		{ 175,285 ,LNS_CLEAR},
+		{ 185,285 ,LNS_CLEAR},
+		{ 195,285 ,LNS_CLEAR},
+		{ 205,285 ,LNS_CLEAR},
+		{ 215,285 ,LNS_CLEAR},
+		{ 225,285 ,LNS_CLEAR},
+		{ 235,285 ,LNS_CLEAR},
+		{ 245,285 ,LNS_CLEAR},
+		{ 255,285 ,LNS_CLEAR},
+		{ 265,285 ,LNS_CLEAR},
+		{ 275,285 ,LNS_CLEAR},
+		{ 285,285 ,LNS_CLEAR},
+		{ 295,285 ,LNS_CLEAR},
+		{ 305,285 ,LNS_CLEAR},
+		{ 315,285 ,LNS_CLEAR},
+		{ 315,275 ,LNS_CLEAR},
+		{ 305,275 ,LNS_CLEAR},
+		{ 295,275 ,LNS_CLEAR},
+		{ 285,275 ,LNS_CLEAR},
+		{ 275,275 ,LNS_CLEAR},
+		{ 265,275 ,LNS_CLEAR},
+		{ 255,275 ,LNS_CLEAR},
+		{ 245,275 ,LNS_CLEAR},
+		{ 235,275 ,LNS_CLEAR},
+		{ 225,275 ,LNS_CLEAR},
+		{ 215,275 ,LNS_CLEAR},
+		{ 205,275 ,LNS_CLEAR},
+		{ 195,275 ,LNS_CLEAR},
+		{ 185,275 ,LNS_CLEAR},
+		{ 175,275 ,LNS_CLEAR},
+		{ 165,275 ,LNS_CLEAR},
+		{ 165,265 ,LNS_CLEAR},
+		{ 175,265 ,LNS_CLEAR},
+		{ 185,265 ,LNS_CLEAR},
+		{ 195,265 ,LNS_CLEAR},
+		{ 205,265 ,LNS_CLEAR},
+		{ 215,265 ,LNS_CLEAR},
+		{ 225,265 ,LNS_CLEAR},
+		{ 235,265 ,LNS_CLEAR},
+		{ 245,265 ,LNS_CLEAR},
+		{ 255,265 ,LNS_CLEAR},
+		{ 265,265 ,LNS_CLEAR},
+		{ 275,265 ,LNS_CLEAR},
+		{ 285,265 ,LNS_CLEAR},
+		{ 295,265 ,LNS_CLEAR},
+		{ 305,265 ,LNS_CLEAR},
+		{ 315,265 ,LNS_CLEAR},
+		{ 315,255 ,LNS_CLEAR},
+		{ 305,255 ,LNS_CLEAR},
+		{ 295,255 ,LNS_CLEAR},
+		{ 285,255 ,LNS_CLEAR},
+		{ 275,255 ,LNS_CLEAR},
+		{ 265,255 ,LNS_CLEAR},
+		{ 255,255 ,LNS_CLEAR},
+		{ 245,255 ,LNS_CLEAR},
+		{ 235,255 ,LNS_CLEAR},
+		{ 225,255 ,LNS_CLEAR},
+		{ 215,255 ,LNS_CLEAR},
+		{ 205,255 ,LNS_CLEAR},
+		{ 195,255 ,LNS_CLEAR},
+		{ 185,255 ,LNS_CLEAR},
+		{ 175,255 ,LNS_CLEAR},
+		{ 165,255 ,LNS_CLEAR},
+		{ 165,245 ,LNS_CLEAR},
+		{ 175,245 ,LNS_CLEAR},
+		{ 185,245 ,LNS_CLEAR},
+		{ 195,245 ,LNS_CLEAR},
+		{ 205,245 ,LNS_CLEAR},
+		{ 215,245 ,LNS_CLEAR},
+		{ 225,245 ,LNS_CLEAR},
+		{ 235,245 ,LNS_CLEAR},
+		{ 245,245 ,LNS_CLEAR},
+		{ 255,245 ,LNS_CLEAR},
+		{ 265,245 ,LNS_CLEAR},
+		{ 275,245 ,LNS_CLEAR},
+		{ 285,245 ,LNS_CLEAR},
+		{ 295,245 ,LNS_CLEAR},
+		{ 305,245 ,LNS_CLEAR},
+		{ 315,245 ,LNS_CLEAR},
+		{ 315,235 ,LNS_CLEAR},
+		{ 305,235 ,LNS_CLEAR},
+		{ 295,235 ,LNS_CLEAR},
+		{ 285,235 ,LNS_CLEAR},
+		{ 275,235 ,LNS_CLEAR},
+		{ 265,235 ,LNS_CLEAR},
+		{ 255,235 ,LNS_CLEAR},
+		{ 245,235 ,LNS_CLEAR},
+		{ 235,235 ,LNS_CLEAR},
+		{ 225,235 ,LNS_CLEAR},
+		{ 215,235 ,LNS_CLEAR},
+		{ 205,235 ,LNS_CLEAR},
+		{ 195,235 ,LNS_CLEAR},
+		{ 185,235 ,LNS_CLEAR},
+		{ 175,235 ,LNS_CLEAR},
+		{ 165,235 ,LNS_CLEAR},
+		{ 165,225 ,LNS_CLEAR},
+		{ 175,225 ,LNS_CLEAR},
+		{ 185,225 ,LNS_CLEAR},
+		{ 195,225 ,LNS_CLEAR},
+		{ 205,225 ,LNS_CLEAR},
+		{ 215,225 ,LNS_CLEAR},
+		{ 225,225 ,LNS_CLEAR},
+		{ 235,225 ,LNS_CLEAR},
+		{ 245,225 ,LNS_CLEAR},
+		{ 255,225 ,LNS_CLEAR},
+		{ 265,225 ,LNS_CLEAR},
+		{ 275,225 ,LNS_CLEAR},
+		{ 285,225 ,LNS_CLEAR},
+		{ 295,225 ,LNS_CLEAR},
+		{ 305,225 ,LNS_CLEAR},
+		{ 315,225 ,LNS_CLEAR},
+		{ 315,215 ,LNS_CLEAR},
+		{ 305,215 ,LNS_CLEAR},
+		{ 295,215 ,LNS_CLEAR},
+		{ 285,215 ,LNS_CLEAR},
+		{ 275,215 ,LNS_CLEAR},
+		{ 265,215 ,LNS_CLEAR},
+		{ 255,215 ,LNS_CLEAR},
+		{ 245,215 ,LNS_CLEAR},
+		{ 235,215 ,LNS_CLEAR},
+		{ 225,215 ,LNS_CLEAR},
+		{ 215,215 ,LNS_CLEAR},
+		{ 205,215 ,LNS_CLEAR},
+		{ 195,215 ,LNS_CLEAR},
+		{ 185,215 ,LNS_CLEAR},
+		{ 175,215 ,LNS_CLEAR},
+		{ 165,215 ,LNS_CLEAR},
+		{ 165,205 ,LNS_CLEAR},
+		{ 175,205 ,LNS_CLEAR},
+		{ 185,205 ,LNS_CLEAR},
+		{ 195,205 ,LNS_CLEAR},
+		{ 205,205 ,LNS_CLEAR},
+		{ 215,205 ,LNS_CLEAR},
+		{ 225,205 ,LNS_CLEAR},
+		{ 235,205 ,LNS_CLEAR},
+		{ 245,205 ,LNS_CLEAR},
+		{ 255,205 ,LNS_CLEAR},
+		{ 265,205 ,LNS_CLEAR},
+		{ 275,205 ,LNS_CLEAR},
+		{ 285,205 ,LNS_CLEAR},
+		{ 295,205 ,LNS_CLEAR},
+		{ 305,205 ,LNS_CLEAR},
+		{ 315,205 ,LNS_CLEAR},
+		{ 315,195 ,LNS_CLEAR},
+		{ 305,195 ,LNS_CLEAR},
+		{ 295,195 ,LNS_CLEAR},
+		{ 285,195 ,LNS_CLEAR},
+		{ 275,195 ,LNS_CLEAR},
+		{ 265,195 ,LNS_CLEAR},
+		{ 255,195 ,LNS_CLEAR},
+		{ 245,195 ,LNS_CLEAR},
+		{ 235,195 ,LNS_CLEAR},
+		{ 225,195 ,LNS_CLEAR},
+		{ 215,195 ,LNS_CLEAR},
+		{ 205,195 ,LNS_CLEAR},
+		{ 195,195 ,LNS_CLEAR},
+		{ 185,195 ,LNS_CLEAR},
+		{ 175,195 ,LNS_CLEAR},
+		{ 165,195 ,LNS_CLEAR},
+		{ 165,185 ,LNS_CLEAR},
+		{ 175,185 ,LNS_CLEAR},
+		{ 185,185 ,LNS_CLEAR},
+		{ 195,185 ,LNS_CLEAR},
+		{ 205,185 ,LNS_CLEAR},
+		{ 215,185 ,LNS_CLEAR},
+		{ 225,185 ,LNS_CLEAR},
+		{ 235,185 ,LNS_CLEAR},
+		{ 245,185 ,LNS_CLEAR},
+		{ 255,185 ,LNS_CLEAR},
+		{ 265,185 ,LNS_CLEAR},
+		{ 275,185 ,LNS_CLEAR},
+		{ 285,185 ,LNS_CLEAR},
+		{ 295,185 ,LNS_CLEAR},
+		{ 305,185 ,LNS_CLEAR},
+		{ 315,185 ,LNS_CLEAR},
+		{ 315,175 ,LNS_CLEAR},
+		{ 305,175 ,LNS_CLEAR},
+		{ 295,175 ,LNS_CLEAR},
+		{ 285,175 ,LNS_CLEAR},
+		{ 275,175 ,LNS_CLEAR},
+		{ 265,175 ,LNS_CLEAR},
+		{ 255,175 ,LNS_CLEAR},
+		{ 245,175 ,LNS_CLEAR},
+		{ 235,175 ,LNS_CLEAR},
+		{ 225,175 ,LNS_CLEAR},
+		{ 215,175 ,LNS_CLEAR},
+		{ 205,175 ,LNS_CLEAR},
+		{ 195,175 ,LNS_CLEAR},
+		{ 185,175 ,LNS_CLEAR},
+		{ 175,175 ,LNS_CLEAR},
+		{ 165,175 ,LNS_CLEAR},
+		{ 165,165 ,LNS_CLEAR},
+		{ 175,165 ,LNS_CLEAR},
+		{ 185,165 ,LNS_CLEAR},
+		{ 195,165 ,LNS_CLEAR},
+		{ 205,165 ,LNS_CLEAR},
+		{ 215,165 ,LNS_CLEAR},
+		{ 225,165 ,LNS_CLEAR},
+		{ 235,165 ,LNS_CLEAR},
+		{ 245,165 ,LNS_CLEAR},
+		{ 255,165 ,LNS_CLEAR},
+		{ 265,165 ,LNS_CLEAR},
+		{ 275,165 ,LNS_CLEAR},
+		{ 285,165 ,LNS_CLEAR},
+		{ 295,165 ,LNS_CLEAR},
+		{ 305,165 ,LNS_CLEAR},
+		{ 315,165 ,LNS_CLEAR},   /* 255 screen lower right */
+
+		{ 234, 350, LNS_CLEAR},	 /* Bonus 100 */
+		{ 234, 385, LNS_CLEAR},  /* Bonus 200 */
+		{ 234, 420, LNS_CLEAR},  /* Bonus 300 */
+		{ 234, 455, LNS_CLEAR},  /* Bonus 400 */
+
+		{ 190, 530, LNS_CLEAR},		/*Multi x1*/
+		{ 165, 542, LNS_CLEAR},
+		{ 170, 575, LNS_CLEAR},
+		{ 175, 623, LNS_CLEAR},		/*Multi x4*/
+		{ 160, 673, LNS_CLEAR},
+
+		{ 168, 730, LNS_CLEAR},  /*dophin*/
+		{ 105, 680, LNS_CLEAR},  /*mouse*/
+
+		{ 55,  680, LNS_RED},	/* LEFTRUN_TR */
+		{ 15,  680, LNS_RED},	/* LEFTRUN_TL */
+
+		{ 128, 520, LNS_RED},  /* ZAPGUN */
+		{ 55, 520, LNS_RED},	/* LEFTRUN_CR */
+		{ 15, 520, LNS_RED},	/* LEFTRUN_CL */
+
+		{ 160, 450, LNS_CLEAR},	  /*HEART_1*/
+		{ 170, 385, LNS_CLEAR},	  /*HEART_2*/
+		{ 150, 385, LNS_CLEAR},   /*HEART_3*/
+		{ 130, 340, LNS_RED},   /*HEART_RED*/
+
+		{ 50, 315, LNS_BLUE},   /* LEFTRUN_LR */
+
+		{ 90, 195, LNS_CLEAR },
+		{ 100, 195, LNS_CLEAR },
+		{ 90, 205, LNS_CLEAR },
+		{ 100, 205, LNS_CLEAR },
+
+		{25,  160, LNS_ORANGE}, /* drain left*/
+
+		{ 35,  0 , LNS_CLEAR},  	/* STATUS_1 */
+		{ 65,  0 , LNS_CLEAR},  	/*  STATUS_2  */
+		{ 85,  0 , LNS_CLEAR},   	/*STAUS_3 */
+		{ 105, 0 , LNS_CLEAR},  	/* STAUS_4 */
+		{ 123, 0,  LNS_CLEAR},  	/* STATUS_5 */
+		{ 142, 0 , LNS_CLEAR}, 		/* STATUS_6 */
+		{ 225, 95, LNS_YELLOW},  	/*DRAIN_CENTER*/
+
+		{ 360, 160, LNS_CLEAR},   /*GLOBE_START */
+		{ 360, 150, LNS_CLEAR},
+		{ 360, 140, LNS_CLEAR},
+
+		{ 370, 170, LNS_CLEAR},
+		{ 370, 160, LNS_CLEAR},
+		{ 370, 150, LNS_CLEAR},
+		{ 370, 140, LNS_CLEAR},
+		{ 370, 130, LNS_CLEAR},
+
+		{ 370, 170, LNS_CLEAR},
+		{ 380, 160, LNS_CLEAR},
+		{ 380, 150, LNS_CLEAR},
+		{ 380, 140, LNS_CLEAR},
+		{ 380, 130, LNS_CLEAR},
+
+		{ 390, 170, LNS_CLEAR},
+		{ 390, 160, LNS_CLEAR},
+		{ 390, 150, LNS_CLEAR},
+		{ 390, 140, LNS_CLEAR},
+		{ 390, 130, LNS_CLEAR},
+
+		{ 400, 160, LNS_CLEAR},
+		{ 400, 150, LNS_CLEAR},
+		{ 400, 140, LNS_CLEAR},  /*Globe End */
+
+		{ 370, 250, LNS_ORANGE}, /* BABELFISH */
+
+		{ 420, 275, LNS_CLEAR }, /* rocket back */
+		{ 420, 285, LNS_CLEAR },
+		{ 420, 295, LNS_CLEAR },
+		{ 420, 305, LNS_CLEAR },
+		{ 420, 315, LNS_CLEAR },
+		{ 420, 325, LNS_CLEAR },
+		{ 420, 335, LNS_CLEAR }, /* rocket tip */
+
+		{ 375, 415, LNS_WHITE},  	/* TRILOGY */
+		{ 322, 395, LNS_CLEAR},  	/* JELTZ_1 */
+		{ 300, 395, LNS_CLEAR},  	/* JELTZ_2 */
+
+		{272, 495, LNS_CLEAR},  /* BONUS500 */
+		{300, 535, LNS_CLEAR},  /* BONUS600 */
+		{315, 585, LNS_CLEAR}, 	/* BONUS700 */
+		{350, 630, LNS_CLEAR},  /* BONUS800 */
+		{372, 665, LNS_RED},    /* BONUS900 */
+
+		{360, 800, LNS_CLEAR},  /* RAINBOW */
+
+		{325, 831, LNS_CLEAR}, 	/* LIFE */
+		{270, 870, LNS_BLUE},  	/*BETELGUESE */
+
+		{275, 807, LNS_CLEAR},  /* UNIVERSE */
+		{230, 780, LNS_CLEAR},  /* EVERYTHING */
+		{180, 750, LNS_CLEAR} /*EVERYTHING_LEFT */
+
+};
+#else
+
+extern PIXLOC Pixel_XYT[];
+
+#endif
+
+
